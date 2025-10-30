@@ -1,0 +1,10 @@
+footer {
+  margin-top: auto; /* Empuja el footer hacia abajo */
+  background-color: #f8f8f8; /* Color de fondo opcional */
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  color: #333;
+  width: 100%;
+  box-shadow: 0 -1px 5px rgba(0,0,0,0.1); /* Opcional para un poco de sombra */
+}

@@ -1,0 +1,202 @@
+/* Contenedor principal  CAMBIALO LOS ESTUILSO CON CHATGPT Y EL NOMBRE DEL NAVBAR COSA QUE SEA DIFERENTE PERO YA DA */
+
+.container {
+
+  max-width: 700px;
+  margin: 40px auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #d36060;
+  padding: 0 15px;
+}
+
+/* Encabezados */
+h2, h3 {
+
+  text-align: center;
+  color: #000000;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #1d4ed8, #3b82f6, #60a5fa); /* Degradado azul */
+
+}
+
+
+
+
+/* Botones */
+button, .btn {
+  background-color: hsl(96, 84%, 40%);
+  color: white;
+  padding: 10px 20px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover, .btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+button:disabled, .btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Formulario */
+.form-group {
+
+  margin-bottom: 15px;
+  background-color: linear-gradient(90deg, #1d4ed8, #60a5fa);
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0,123,255,0.3);
+  outline: none;
+}
+
+/* Mensajes de error */
+.error {
+  color: #d9534f;
+  font-size: 0.85em;
+  margin-top: 4px;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+  transition: opacity 0.3s ease;
+}
+
+.modal.show {
+  display: block;
+}
+
+.modal-content {
+  background-color: #dfd6d0;
+  margin: 8% auto;
+  padding: 25px 30px;
+  width: 450px;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  animation: modalFade 0.3s ease;
+}
+
+@keyframes modalFade {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #888;
+  transition: color 0.2s;
+}
+
+.close:hover {
+  color: #000;
+}
+
+/* Tabla moderna */
+.tabla {
+
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-top: 20px;
+  font-size: 14px;
+  background-color: linear-gradient(90deg, #1d4ed8, #60a5fa);
+}
+
+/* Encabezado */
+.tabla th {
+  background: linear-gradient(90deg, #007bff, #0056b3);
+  color: white;
+  font-weight: 600;
+  text-align: left;
+  padding: 12px 15px;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+/* Filas */
+.tabla td {
+  padding: 12px 15px;
+  background-color: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  transition: background-color 0.2s;
+}
+
+/* Filas alternadas */
+.tabla tr:nth-child(even) td {
+  background-color: #f8f9fa;
+}
+
+/* Hover en filas */
+.tabla tr:hover td {
+  background-color: #e6f0ff;
+  cursor: pointer;
+}
+
+/* Bordes redondeados en la primera y última fila */
+.tabla tr:first-child td:first-child {
+  border-top-left-radius: 12px;
+}
+
+.tabla tr:first-child td:last-child {
+  border-top-right-radius: 12px;
+}
+
+.tabla tr:last-child td:first-child {
+  border-bottom-left-radius: 12px;
+}
+
+.tabla tr:last-child td:last-child {
+  border-bottom-right-radius: 12px;
+}
+
+/* Scroll horizontal si es necesario */
+.table-wrapper {
+  overflow-x: auto;
+}

@@ -1,0 +1,56 @@
+<!-- app.component.html -->
+<div style="max-width: 600px; margin: 20px auto;">
+  <h2>EMPLEADOS</h2>
+
+  <button (click)="abrirModal()" class="text-2xl font-semibold text-gray-800 mb-4 text-center">AGREGAR EMPLEADOS</button>
+
+
+  <!-- Modal -->
+  <div class="modal" [class.show]="modalVisible">
+    <div class="modal-content">
+      <span class="close" (click)="cerrarModal()">&times;</span>
+      <h3  >CREAR EMPLEADOS</h3>
+      <form #userForm="ngForm" (ngSubmit)="agregarUsuario()">
+        <div>
+          <label style="color:rgb(0, 0, 0);">Nombre:</label>
+          <input type="text" name="nombre" [(ngModel)]="nuevoUsuario.nombre" required />
+        </div>
+
+        <div>
+          <label style="color:rgb(0, 0, 0);">Apellido:</label>
+          <input type="text" name="apellido" [(ngModel)]="nuevoUsuario.apellido" required />
+        </div>
+
+        <div>
+          <label style="color:rgb(0, 0, 0);">Correo:</label>
+          <input type="email" name="correo" [(ngModel)]="nuevoUsuario.correo" required />
+          <div *ngIf="correoDuplicado" style="color:red;">El correo ya existe</div>
+        </div>
+
+        <div>
+          <label style="color:rgb(0, 0, 0);">Salario:</label>
+          <input type="number" name="salario" [(ngModel)]="nuevoUsuario.salario" required step="0.01" max="10" />
+        </div>
+
+        <button type="submit">Crear</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Tabla de correos -->
+  <h3 >LISTA DE CORREOS</h3>
+  <table border="5" width="100%" >
+    <tr >
+      <th style="color:rgb(0, 0, 0);">NOMBRE</th>
+      <th style="color:rgb(0, 0, 0);">APELLIDO</th>
+      <th style="color:rgb(0, 0, 0);">CORREO</th>
+      <th style="color:rgb(0, 0, 0);">SALARIO</th>
+    </tr>
+    <tr *ngFor="let user of usuarios">
+      <td>{{ user.nombre }}</td>
+      <td>{{ user.apellido }}</td>
+      <td>{{ user.correo }}</td>
+      <td>{{ user.salario }}</td>
+    </tr>
+  </table>
+</div>
