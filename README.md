@@ -1,10 +1,14 @@
-# Backend Laravel - Empleados
-1. Copiar .env.example -> .env y configurar DB.
-2. composer install
-3. php artisan key:generate
-4. php artisan migrate
-5. php artisan db:seed
-6. php artisan serve --port=8000
-API endpoints:
-GET  /api/empleados
-POST /api/empleados
+# SEGUNDO EXAMEN DE TECNOLOGIAS DE INTERNET 
+
+# frontend - Empleados
+
+1) feat(web): crear proyecto Angular y
+componente empleados.
+
+2) feat(web): crear servicio empleados y
+consumir API.
+
+3) feat(web): vista tabla + formulario
+insertar empleados
+
+
